@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "IG Compliance Reporter",
+  "version": "1.6",
+  "description": "v1.6: highlights now advance reliably -- verifies each story change and falls back to ArrowRight / tap if the Next arrow isn't found, and flags early stops. v1.5: story highlight links (instagram.com/stories/highlights/<id>) are now accepted instead of skipped as invalid -- each story in the highlight is reported in turn via Next. Step through Instagram post/reel/profile/highlight tabs (already open, or pasted as links) and file a restricted-items (tobacco) report on each, one tab at a time, closing each after a 5s confirmation wait. v1.4: fixed the profile page's '...' menu not being found -- it's labeled just 'Options' there (not 'More options' like on posts) and sits beside the username heading rather than in a normal toolbar; detection now matches that label and checks near the username as well.",
+  "permissions": ["tabs", "scripting"],
+  "host_permissions": [
+    "https://www.instagram.com/*",
+    "https://instagram.com/*"
+  ],
+  "action": {
+    "default_title": "Open IG Compliance Reporter"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
